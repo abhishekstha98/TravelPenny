@@ -1,0 +1,42 @@
+﻿@model TravPense.Models.DataBaseViewModels.ActivityViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ActivityViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ActivityName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ActivityName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LocationType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Activityid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

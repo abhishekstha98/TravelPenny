@@ -1,0 +1,54 @@
+﻿@model TravPense.Models.DataBaseViewModels.HotelViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>HotelViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="HotelId" />
+            <div class="form-group">
+                <label asp-for="HotelName" class="control-label"></label>
+                <input asp-for="HotelName" class="form-control" />
+                <span asp-validation-for="HotelName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Destinatino" class="control-label"></label>
+                <input asp-for="Destinatino" class="form-control" />
+                <span asp-validation-for="Destinatino" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact" class="control-label"></label>
+                <input asp-for="Contact" class="form-control" />
+                <span asp-validation-for="Contact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MinPPP" class="control-label"></label>
+                <input asp-for="MinPPP" class="form-control" />
+                <span asp-validation-for="MinPPP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaxPPP" class="control-label"></label>
+                <input asp-for="MaxPPP" class="form-control" />
+                <span asp-validation-for="MaxPPP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

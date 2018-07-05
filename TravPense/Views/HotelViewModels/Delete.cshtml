@@ -1,0 +1,51 @@
+﻿@model TravPense.Models.DataBaseViewModels.HotelViewModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>HotelViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HotelName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HotelName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Destinatino)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Destinatino)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Contact)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MinPPP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MinPPP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxPPP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaxPPP)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="HotelId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

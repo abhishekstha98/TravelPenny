@@ -1,0 +1,48 @@
+﻿@model TravPense.Models.DataBaseViewModels.HotelViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HotelViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HotelName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HotelName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Destinatino)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Destinatino)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Contact)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MinPPP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MinPPP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxPPP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaxPPP)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.HotelId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
