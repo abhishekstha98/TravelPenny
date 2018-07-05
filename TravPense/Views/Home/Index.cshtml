@@ -1,8 +1,28 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@inject SignInManager<ApplicationUser> SignInManager
+@if (SignInManager.IsSignedIn(User))
+{
 <div>
+    <br />
+    <br />
+    <br />
     <a asp-area="" asp-controller="ApplicationUsers" asp-action="Index">Manage User</a>
     @*<a asp-area="" asp-controller="Account" asp-action="Login">Manage Hotels</a>
         <a asp-area="" asp-controller="Account" asp-action="Register">Manage Activities</a>*@
+
+    <br />
+    <br />
+    <br />
+    <a asp-area="" asp-controller="ApplicationUsers" asp-action="Index">Manage Hotel</a>
+    <br />
+    <br />
+    <br />
+    <a asp-area="" asp-controller="ApplicationUsers" asp-action="Index">Manage Activities</a>
 </div>
+}
+else
+{
+    <h2>YOU ARE NOT LOGGED IN</h2>
+}
